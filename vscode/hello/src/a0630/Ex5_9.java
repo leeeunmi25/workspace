@@ -20,13 +20,16 @@ public class Ex5_9 {
             korTotal = korTotal + score[i][0];
             engTotal = engTotal + score[i][1];
             mathTotal += score[i][2];
-            System.out.printf("%3d", i+1); 
+            System.out.printf("%3d", i+1); //번호
             for (int j=0; j < score[i].length;j++){
                 sum = sum + score[i][j];
-                System.out.printf("%5d",score[i][j]);
+                System.out.printf("%5d",score[i][j]); //기본점수
             }
+            avg = sum / (float) score[i].length; //평균계산
+            System.out.printf("%5d %5.1f%n", sum, avg);
         }
-
+    System.out.println("=============================");
+    System.out.printf("총점: %3d %4d %4d%n", korTotal, engTotal, mathTotal);
     }
     
 }
