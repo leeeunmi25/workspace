@@ -64,8 +64,11 @@
         $(function(){
             $(".slider").bxSlider({
                 auto:true,
-            })
-        })
+                controls:false,
+                onSlideBefore:function(){},
+                onSlideAfter:function(){},    
+            });
+        });
     </script>
 </head>
 <body>
