@@ -1,4 +1,4 @@
-package verify;
+package a0627;
 public class Exercise07 {
 	public static void main(String[] args) {
 		int x = 10;

@@ -62,13 +62,23 @@
     </style>
     <script>
         $(function(){
-            $(".slider").bxSlider({
+            var slider = $(".slider").bxSlider({
                 auto:true,
                 controls:false,
-                onSlideBefore:function(){},
-                onSlideAfter:function(){},    
-            });
-        });
+                onSlideBefore:function(){
+                    var n = slider.getCurrentSlide(); //현재 슬라이드의 인덱스 번호
+                    var w = $('#page ul li').width(); // 현재 하단의 번호있는 li의 넓이
+                    $('#page ul li').removeClass('on');
+                    $('#page ul li').eq(n).addClass('on');
+                    if (n==0){
+                        $('#focus').css('left',"0");
+                    }else {
+                        $('#focus').stop().animate({left:n*w},600);
+                    }
+                },
+                onSlideAfter:function(){},
+            })
+        })
     </script>
 </head>
 <body>
