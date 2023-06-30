@@ -12,6 +12,16 @@ public class question2 {
         int total = 0;
         float average = 0;
 
+        for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr[i].length; j++) {
+        total = total + arr[i][j];
+        // 이중 배열이 몇 개인가 구하기 위해 넣음
+        average++;
+            }
+        }
+        // 총합 / 배열 개수
+        average = total / average;
+
 
 
 
